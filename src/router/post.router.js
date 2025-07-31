@@ -1,7 +1,7 @@
 const express = require("express");
 const ImageKit = require("imagekit");
 const multer = require("multer");
-const postModel = require("../model/post.model");
+const postModel = require("src/model/post.model");
 require("dotenv").config();
 
 const router = express.Router();
