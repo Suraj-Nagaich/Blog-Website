@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Home</title>
+    <link rel="stylesheet" href="/home.css" />
+  </head>
+  <body>
+    <nav >
+      <a href="/posts/add">Write New Blog</a>
+      <% if(decode){ %>
+        <a href="/users/logout">Logout</a>
+      <% } else { %>
+        <a href="/users/login">Login</a>
+      <% } %>
+    </nav>
+
+    <div class="filter">
+      <form action="/" method="get">
+        <select name="category">
+          <option value="">All Categories</option>
+          <option value="technology">Technology</option>
+          <option value="lifestyle">Lifestyle</option>
+          <option value="travel">Travel</option>
+          <option value="food">Food</option>
+        </select>
+        <button type="submit">Apply Filter</button>
+      </form>
+    </div>
+
+    <!-- <div class="container">
+      <% posts.forEach(post => { %>
+      <div class="card">
+        <div class="top">
+          <img src="<%= post.image %>" alt="Blog Image" />
+        </div>
+        <div class="bottom">
+          <a href="/posts/detail/<%= post._id %>">
+            <h2><%= post.title %></h2>
+          </a>
+          <p><%= post.snippet %></p>
+          <p><em>By <%= post.author %> | <%= post.date %></em></p>
+        </div>
+      </div>
+      <% }); %>
+    </div> -->
+    <div class="container">
+  <% posts.forEach(post => { %>
+  <div class="card">
+    <div class="top">
+      <img src="<%= post.image %>" alt="Blog Image" />
+    </div>
+    <div class="bottom">
+      <h2><%= post.title %></h2>
+      <p><%= post.snippet %></p>
+      <p><em>By <%= post.author %> | <%= post.date %></em></p>
+
+      <!-- Action Buttons -->
+      <div class="actions">
+        <a href="/posts/detail/<%= post._id %>">🔍 Full View</a>
+
+        <% if(decode && decode.username === post.author){ %>
+          <a href="/posts/edit/<%= post._id %>">✏️ Update</a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+  <% }); %>
+</div>
+
+  </body>
+</html>
