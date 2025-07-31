@@ -1,6 +1,6 @@
 
 const express = require("express");
-const postModel = require("../model/post.model"); // rename to blog post model
+const postModel = require("src/model/post.model"); // rename to blog post model
 const jwt = require("jsonwebtoken");
 
 const router = express.Router();
