@@ -1,26 +1,36 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title><%= post.title %> - Blog</title>
-  <link rel="stylesheet" href="/postDetail.css" />
+  <title>Write New Blog</title>
+  <link rel="stylesheet" href="/postForm.css" />
 </head>
 <body>
-  <div class="main">
-    <div class="left">
-      <img src="<%= post.image %>" alt="Blog Image" />
+
+  <h2>Write New Blog Post</h2>
+  <form action="/posts/add" enctype="multipart/form-data" method="post">
+
+    <label for="title">Title</label><br>
+    <input type="text" name="title" placeholder="Enter blog title" required><br><br>
+
+    <label for="image">Cover Image</label><br>
+    <input type="file" name="image"><br><br>
+
+    <label for="author">Author</label><br>
+    <input type="text" name="author" placeholder="Enter author name" required><br><br>
+
+    <label for="category">Category</label><br>
+    <input type="text" name="category" placeholder="e.g. technology, travel" required><br><br>
+
+    <label for="content">Content</label><br>
+    <textarea name="content" rows="10" cols="50" placeholder="Write your blog content here..." required></textarea><br><br>
+
+    <div class="btn">
+      <button type="submit">Publish</button>
     </div>
-    <div class="right">
-      <div class="top">
-        <h1><%= post.title %></h1>
-        <p><em>By <%= post.author %> | <%= post.date %></em></p><br>
-        <p><%= post.content %></p><br>
-        <p><strong>Category:</strong> <%= post.category %></p>
-      </div>
-      
-    </div>
-  </div>
+
+  </form>
+
 </body>
 </html>
