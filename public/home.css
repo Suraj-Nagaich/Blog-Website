@@ -1,0 +1,150 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  padding: 20px;
+  background-color: #9015ea;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #7e13cb;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #5e0fa5;
+}
+
+/* Filter Form */
+.filter {
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.filter form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.filter select, .filter button {
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.filter button {
+  background-color: #9015ea;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.filter button:hover {
+  background-color: #6d11b5;
+}
+
+/* Blog Cards Container */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* Blog Card */
+.card {
+  flex: 1 1 300px;
+  max-width: 350px;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card .top img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card .bottom {
+  padding: 20px;
+  text-align: left;
+}
+
+.card h2 {
+  font-size: 22px;
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.card p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Actions */
+.actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.actions a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #1aa5dc;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.actions a:hover {
+  color: #5e0fa5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filter form {
+    flex-direction: column;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
