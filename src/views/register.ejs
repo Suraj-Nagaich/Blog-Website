@@ -1,26 +1,30 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title><%= post.title %> - Blog</title>
-  <link rel="stylesheet" href="/postDetail.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/register.css">
 </head>
 <body>
-  <div class="main">
-    <div class="left">
-      <img src="<%= post.image %>" alt="Blog Image" />
-    </div>
-    <div class="right">
-      <div class="top">
-        <h1><%= post.title %></h1>
-        <p><em>By <%= post.author %> | <%= post.date %></em></p><br>
-        <p><%= post.content %></p><br>
-        <p><strong>Category:</strong> <%= post.category %></p>
-      </div>
-      
-    </div>
-  </div>
+    <h1>Register new User</h1>
+    <form action="/users/register" method="post">
+        <label for="username">Username :</label>
+        <input type="text" placeholder="enter username" name="username" id="username">
+        <br>
+        <br>
+        <label for="email">Email :</label>
+        <input type="email" placeholder="enter your email" name="email" id="email">
+        <br>
+        <br>
+        <label for="password">Password :</label>
+        <input type="password" name="password" id="password"  placeholder="enter your password">
+        <br>
+        <br>
+        <button type="submit">Register</button>
+        <br>
+        <br>
+        <p>if you have an accout <a href="/users/login">Login</a></p>
+    </form>
 </body>
 </html>
