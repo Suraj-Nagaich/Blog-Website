@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= post.title %> - Blog</title>
+  <link rel="stylesheet" href="/postDetail.css" />
+</head>
+<body>
+  <div class="main">
+    <div class="left">
+      <img src="<%= post.image %>" alt="Blog Image" />
+    </div>
+    <div class="right">
+      <div class="top">
+        <h1><%= post.title %></h1>
+        <p><em>By <%= post.author %> | <%= post.date %></em></p><br>
+        <p><%= post.content %></p><br>
+        <p><strong>Category:</strong> <%= post.category %></p>
+      </div>
+      
+    </div>
+  </div>
+</body>
+</html>
