@@ -6,87 +6,106 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f5f5f5;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f3f5;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 40px 20px;
   min-height: 100vh;
+  color: #2f3e46;
 }
 
 /* Heading */
 h1 {
   margin-bottom: 30px;
-  font-size: 30px;
-  color: #333;
+  font-size: 32px;
+  font-weight: 700;
+  color: #1f2937;
+  letter-spacing: 0.05em;
+  text-align: center;
 }
 
 /* Form Container */
 form {
-  background-color: white;
-  padding: 30px 40px;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  padding: 36px 44px;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(63, 94, 251, 0.15);
   width: 100%;
-  max-width: 400px;
+  max-width: 420px;
+  transition: box-shadow 0.3s ease;
+}
+
+form:hover {
+  box-shadow: 0 12px 32px rgba(63, 94, 251, 0.25);
 }
 
 label {
   font-weight: 600;
-  color: #444;
+  color: #334155;
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+  font-size: 15px;
 }
 
+/* Inputs */
 input {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 14px;
+  padding: 14px 16px;
+  margin-bottom: 24px;
+  border: 1.8px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 15px;
   outline: none;
-  transition: border-color 0.3s ease;
+  background-color: #f9fafb;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  font-weight: 500;
 }
 
 input:focus {
-  border-color: #9015ea;
+  border-color: #3f51b5;
+  background-color: #ffffff;
+  box-shadow: 0 0 8px #3f51b5aa;
 }
 
 /* Button */
 button {
   width: 100%;
-  padding: 12px;
-  background-color: #9015ea;
+  padding: 14px;
+  background-color: #3f51b5;
   color: white;
   border: none;
-  border-radius: 8px;
-  font-weight: bold;
+  border-radius: 12px;
+  font-weight: 700;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  box-shadow: 0 6px 16px rgba(63, 81, 181, 0.35);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 button:hover {
-  background-color: #6d11b5;
+  background-color: #2c387e;
+  box-shadow: 0 8px 20px rgba(44, 56, 126, 0.6);
 }
 
-/* Bottom text */
+/* Bottom Text */
 p {
-  margin-top: 15px;
+  margin-top: 20px;
   text-align: center;
   font-size: 14px;
-  color: #555;
+  color: #64748b;
 }
 
 p a {
-  color: #9015ea;
+  color: #3f51b5;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
 p a:hover {
   text-decoration: underline;
+  color: #2c387e;
 }
