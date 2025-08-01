@@ -6,73 +6,82 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f5f5f5;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #dfe9f3 0%, #ffffff 100%);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
   padding: 20px;
+  color: #333;
 }
 
 /* Header */
 h1 {
   margin-bottom: 30px;
-  color: #333;
-  font-size: 32px;
+  font-size: 30px;
+  text-align: center;
+  color: #2c3e50;
 }
 
-/* Form styling */
+/* Form container */
 form {
-  background-color: white;
-  padding: 30px 40px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 40px 35px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   width: 100%;
-  max-width: 400px;
+  max-width: 420px;
+  transition: all 0.3s ease;
 }
 
+/* Labels */
 label {
-  font-weight: 600;
-  color: #444;
   display: block;
-  margin-bottom: 6px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #34495e;
 }
 
+/* Inputs */
 input {
   width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 14px;
-  margin-bottom: 20px;
-  outline: none;
-  transition: border-color 0.3s ease;
+  padding: 14px 16px;
+  margin-bottom: 22px;
+  font-size: 15px;
+  border: none;
+  border-radius: 10px;
+  background: #f0f0f3;
+  box-shadow: inset 4px 4px 10px #d1d9e6,
+              inset -4px -4px 10px #ffffff;
+  transition: box-shadow 0.3s ease;
 }
 
 input:focus {
-  border-color: #9015ea;
+  outline: none;
+  box-shadow: 0 0 0 2px #3498db;
 }
 
 /* Button */
 button {
   width: 100%;
-  padding: 12px;
-  background-color: #9015ea;
-  color: white;
-  border: none;
-  border-radius: 8px;
+  padding: 14px;
   font-weight: bold;
+  font-size: 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: #3498db;
+  color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #6d11b5;
+  background-color: #2980b9;
 }
 
-/* Extra text */
+/* Extra text below form */
 p {
   margin-top: 20px;
   text-align: center;
@@ -81,19 +90,30 @@ p {
 }
 
 p a {
-  color: #9015ea;
+  color: #3498db;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 p a:hover {
   text-decoration: underline;
 }
 
-/* Horizontal line */
+/* Divider */
 hr {
-  margin: 20px 0;
   border: none;
   height: 1px;
-  background-color: #ddd;
+  background-color: #ccc;
+  margin: 25px 0;
+}
+
+/* Responsive tweak */
+@media (max-width: 480px) {
+  form {
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
 }
